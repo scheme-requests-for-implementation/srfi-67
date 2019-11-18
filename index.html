@@ -30,50 +30,52 @@
       <li>
         <a href="mailto:srfi-67@srfi.schemers.org">srfi-67@<span class="antispam">nospam</span>srfi.schemers.org (subscribers only)</a></li>
       <li>
-        <form method="POST" action="https://www.simplelists.com/subscribe.php">
-          <div class="title">Subscribe to srfi-67 mailing list</div>
-          <input name="email"
-                 placeholder="email address"
-                 tabindex="1"
-                 type="email" >
-          <input name="name"
-                 placeholder="full name"
-                 tabindex="2"
-                 type="text" >
-          <p>
-            <input id="sub-digest"
-                   name="digest"
-                   tabindex="3"
-                   type="checkbox"
-                   value="digest" >
-            <label for="sub-digest">daily digest?</label></p>
-          <input class="submit"
-                 name="submit"
-                 tabindex="4"
-                 type="submit"
-                 value="Subscribe to srfi-67" >
-          <input type="hidden" name="action" value="subscribe">
-          <input type="hidden" name="list" value="srfi-67@srfi.schemers.org"></form></li>
+        <span class="firefox-column-workaround">
+          <form method="POST" action="https://www.simplelists.com/subscribe.php">
+            <div class="title">Subscribe to srfi-67 mailing list</div>
+            <input name="email"
+                   placeholder="email address"
+                   tabindex="1"
+                   type="email" >
+            <input name="name"
+                   placeholder="full name"
+                   tabindex="2"
+                   type="text" >
+            <p>
+              <input id="sub-digest"
+                     name="digest"
+                     tabindex="3"
+                     type="checkbox"
+                     value="digest" >
+              <label for="sub-digest">daily digest?</label></p>
+            <input class="submit"
+                   name="submit"
+                   tabindex="4"
+                   type="submit"
+                   value="Subscribe to srfi-67" >
+            <input type="hidden" name="action" value="subscribe">
+            <input type="hidden" name="list" value="srfi-67@srfi.schemers.org"></form></a></li>
       <li>
-        <form method="POST" action="https://www.simplelists.com/subscribe.php">
-          <p class="title">Unsubscribe from srfi-67 mailing list</p>
-          <input name="email"
-                 placeholder="email address"
-                 tabindex="5"
-                 type="email" >
-          <input class="submit"
-                 name="submit"
-                 tabindex="6"
-                 type="submit"
-                 value="Unsubscribe from srfi-67" >
-          <input name="action"
-                 type="hidden"
-                 value="unsubscribe" >
-          <input name="list"
-                 type="hidden"
-                 value="srfi-67@srfi.schemers.org"></form></li></ul>
+        <span class="firefox-column-workaround">
+          <form method="POST" action="https://www.simplelists.com/subscribe.php">
+            <p class="title">Unsubscribe from srfi-67 mailing list</p>
+            <input name="email"
+                   placeholder="email address"
+                   tabindex="5"
+                   type="email" >
+            <input class="submit"
+                   name="submit"
+                   tabindex="6"
+                   type="submit"
+                   value="Unsubscribe from srfi-67" >
+            <input name="action"
+                   type="hidden"
+                   value="unsubscribe" >
+            <input name="list"
+                   type="hidden"
+                   value="srfi-67@srfi.schemers.org"></form></a></li></ul>
     <h2>Abstract</h2>      <p>This SRFI can be seen as an extension of the
-      standard procedures <tt>=</tt>, <tt>&lt;</tt>, <tt>char&lt;?</tt> etc. of
+      standard procedures <code>=</code>, <code>&lt;</code>, <code>char&lt;?</code> etc. of
       R<sup>5</sup>RS -- or even as a replacement. The primary design aspect in
       this SRFI is the separation of <em>representing</em> a total order and
       <em>using it.</em> For representing the order, we have chosen for truly
@@ -82,9 +84,9 @@
       these compare procedures are often optional, comparing built-in types is
       as convenient as R<sup>5</sup>RS , sometimes more convenient: For
       example, testing if the integer index <em>i</em> lies in the integer
-      range {0, <tt>...</tt>, <em>n</em> <tt>-</tt> 1} can be written as
-      <tt>(&lt;=/&lt;? 0 i n)</tt>, implicitly invoking
-      <tt>default-compare</tt>.
+      range {0, <code>...</code>, <em>n</em> <code>-</code> 1} can be written as
+      <code>(&lt;=/&lt;? 0 i n)</code>, implicitly invoking
+      <code>default-compare</code>.
       <p>As soon as new total orders are required, the
       infrastructure provided by this SRFI is far more convenient and often
       even more efficient than building each total order from scratch.
@@ -92,9 +94,9 @@
       find this mechanism useful and adopt it, the benefit of having a uniform
       interface to total orders to be used in data structures will manifest
       itself. Most concretely, a new sorting procedure in the spirit of this
-      SRFI would have the interface <tt>(my-sort [ <i>compare</i> ]
-      <i>xs</i>)</tt>, using <tt>default-compare</tt> if the optional
-      <i>compare</i> was not provided. Then <tt>my-sort</tt> could be defined
+      SRFI would have the interface <code>(my-sort [ <i>compare</i> ]
+      <i>xs</i>)</code>, using <code>default-compare</code> if the optional
+      <i>compare</i> was not provided. Then <code>my-sort</code> could be defined
       using the entire infrastructure of this SRFI: Efficient 2- and 3-way
       branching, testing for chains and pairwise inequality, min/max, and
       general order statistics.</body></html>
