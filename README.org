@@ -4,6 +4,8 @@
 
 
 
+keywords: [[https://srfi.schemers.org/?keywords=comparison][Comparison]]
+
 This repository hosts [[https://srfi.schemers.org/srfi-67/][SRFI 67]]: Compare Procedures, a [[https://srfi.schemers.org/][Scheme Request for Implementation]].
 
 This SRFI is in /final/ status.
